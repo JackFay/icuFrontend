@@ -22,7 +22,6 @@ export default class Images extends React.Component{
     }
     
     render(){
-        console.log(this.props.images)
         const {images} = this.props;
         const ImageComponents = images.map((image) => {
             return <Image key={image.image_id}{...image} />

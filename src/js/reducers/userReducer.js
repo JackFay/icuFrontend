@@ -10,10 +10,12 @@ export default function reducer(state={
     loggedIn: false,
     userId: null,
     images: [],
+    notifications: [],
   }, action) {
 
     switch (action.type) {
       case "INIT":{
+          //console.log(JSON.parse(localStorage.getItem('user')))
           return JSON.parse(localStorage.getItem('user'))
       }   
       case "FETCH_USER": {
@@ -56,6 +58,7 @@ export default function reducer(state={
                 loggedIn: false,
                 userId: null,
                 images: [],
+                notifications: []
             }))
             return{
                 ...state,
@@ -70,6 +73,7 @@ export default function reducer(state={
                 loggedIn: false,
                 userId: null,
                 images: [],
+                notifications: []
             }
         }
         case "GET_IMAGES":{
