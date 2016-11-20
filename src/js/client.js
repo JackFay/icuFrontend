@@ -15,8 +15,9 @@ import Settings from "./pages/Settings";
 import SignUp from "./pages/SignUp";
 
 
-
 store.dispatch({type: "INIT"})
+
+
 
 const app = document.getElementById('app');
 
@@ -33,6 +34,7 @@ ReactDOM.render(
   </Router>
   </Provider>,
 app);
+
 
 
 //      <Route path="archives(/:article)" name="archives" component={Archives}></Route>

@@ -15,8 +15,9 @@ export default function reducer(state={
 
     switch (action.type) {
       case "INIT":{
-          //console.log(JSON.parse(localStorage.getItem('user')))
-          return JSON.parse(localStorage.getItem('user'))
+              //console.log(JSON.parse(localStorage.getItem('user')))
+              //return JSON.parse(JSON.parse(localStorage.getItem('user')))
+          
       }   
       case "FETCH_USER": {
         return {...state, fetching: true}
@@ -33,11 +34,11 @@ export default function reducer(state={
         }
       }
         case "LOGIN_SUCCESS":{
-            localStorage.setItem('user', JSON.stringify({
-                ...state,
-                loggedIn: true,
-                userId: action.payload.user_id
-            }))
+//            localStorage.setItem('user', JSON.stringify({
+//                ...state,
+//                loggedIn: true,
+//                userId: action.payload.user_id
+//            }))
             return{
                 ...state,
                 loggedIn: true,
@@ -45,21 +46,22 @@ export default function reducer(state={
             }
         }
         case "LOGOUT":{
-            localStorage.setItem('user', JSON.stringify({
-                ...state,
-                user: {
-                  id: null,
-                  name: null,
-                  age: null,
-                },
-                fetching: false,
-                fetched: false,
-                error: null,
-                loggedIn: false,
-                userId: null,
-                images: [],
-                notifications: []
-            }))
+//            localStorage.setItem('user', JSON.stringify({
+//                ...state,
+//                user: {
+//                  id: null,
+//                  name: null,
+//                  age: null,
+//                },
+//                fetching: false,
+//                fetched: false,
+//                error: null,
+//                loggedIn: false,
+//                userId: null,
+//                images: [],
+//                notifications: []
+//            }))
+            
             return{
                 ...state,
                 user: {
