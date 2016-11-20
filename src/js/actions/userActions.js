@@ -43,6 +43,7 @@ export function logout(){
 
 export function get_images(userId){
     return function(dispatch){
+        /*Returns all rows and columns from images table where user_id = userId */
         var req = "http://localhost:8000/api/image/" + userId;
         axios.get(req)
         .then((response) => {

@@ -79,6 +79,7 @@ export default function reducer(state={
             }
         }
         case "GET_IMAGES":{
+            console.log(action.payload)
             return{
                 ...state,
                 images: action.payload
